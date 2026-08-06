@@ -1,0 +1,26 @@
+/* ============ NO MORE TEARS — design tokens ============ */
+:root {
+  /* palette ink & blade */
+  --bg: #0A0A0C;
+  --surface: #131316;
+  --surface-2: #1A1A1F;
+  --line: #232327;
+  --red: #E11D2E;
+  --red-deep: #A3121F;
+  --red-glow: rgba(225, 29, 46, 0.16);
+  --bone: #F2EDE3;
+  --muted: #8B8B94;
+  --muted-2: #5C5C66;
+
+  /* typography */
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-cond: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', 'Segoe UI', sans-serif;
+
+  /* rhythm */
+  --container: 1180px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --header-h: 76px;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
