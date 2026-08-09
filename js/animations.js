@@ -1,7 +1,30 @@
-/* ============ animations.js — GSAP + ScrollTrigger: reveal, parallax ============ */
+/* No More Tears — animations.js (GSAP + Lenis self-hosted) */
 (function () {
   'use strict';
 
+  /* Lenis — UNA istanza, retry-loop */
+  (function initLenis() {
+    if (typeof Lenis === 'undefined') {
+      if (window.__lenisRetries === undefined) window.__lenisRetries = 0;
+      if (++window.__lenisRetries > 40) return;
+      setTimeout(initLenis, 250);
+      return;
+    }
+    if (window.lenis) return;
+    window.lenis = new Lenis({
+      duration: 1.15,
+      easing: function (t) { return 1 - Math.pow(1 - t, 3); },
+      smoothWheel: true
+    });
+    function raf(time) { window.lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+    if (window.__lenisSynced !== true && typeof ScrollTrigger !== 'undefined') {
+      window.lenis.on('scroll', ScrollTrigger.update);
+      window.__lenisSynced = true;
+    }
+  })();
+
+  /* GSAP init retry-loop */
   (function initGSAP() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
       if (window.__gsapRetries === undefined) window.__gsapRetries = 0;
@@ -10,64 +33,59 @@
       return;
     }
     gsap.registerPlugin(ScrollTrigger);
-
-    if (window.lenis && !window.__lenisSynced) {
+    if (window.lenis && window.__lenisSynced !== true) {
       window.lenis.on('scroll', ScrollTrigger.update);
       window.__lenisSynced = true;
     }
-
-    /* pre-hide: SEMPRE gsap.set prima dei trigger (anti-blink) */
-    gsap.set('.reveal', { opacity: 0 });
-    gsap.set('.reveal-line', { opacity: 0 });
-
-    /* reveal generico */
-    function reveal(selector, vars) {
-      ScrollTrigger.create({
-        trigger: selector,
-        start: 'top 82%',
-        onEnter: function () {
-          gsap.fromTo(selector, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.1, ease: 'power3.out', ...vars });
-        },
-        onLeaveBack: function () { gsap.set(selector, { opacity: 1, y: 0 }); }
-      });
-    }
-    reveal('.about__grid');
-    reveal('.services__grid');
-    reveal('.gallery__grid');
-    reveal('.reviews__grid');
-    reveal('.contact__grid');
-
-    /* title reveal per riga (eyebrow + title) */
-    document.querySelectorAll('.section-title').forEach(function (el) {
-      ScrollTrigger.create({
-        trigger: el,
-        start: 'top 85%',
-        onEnter: function () {
-          gsap.fromTo(el, { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' });
-        },
-        onLeaveBack: function () { gsap.set(el, { opacity: 1, y: 0 }); }
-      });
-    });
-
-    /* parallax sulle foto gallery */
-    document.querySelectorAll('.g-item img').forEach(function (img) {
-      gsap.fromTo(img, { yPercent: -8 }, {
-        yPercent: 8,
-        ease: 'none',
-        scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: 0.6 }
-      });
-    });
-
-    /* parallax leggero hero (solo su schermi grandi, no mobile) */
-    if (window.matchMedia('(min-width: 921px)').matches) {
-      gsap.fromTo('.hero__bg', { yPercent: 0 }, {
-        yPercent: 10,
-        ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.5 }
-      });
-    }
-
     window.__gsapReady = true;
+
+    /* Pre-hide sotto la fold (anti-flash senza blink) */
+    gsap.set('.section-head, .review-score, .contact-card, .hours-card, .artist-card', { opacity: 0, y: 30 });
+
+    /* Reveal con scrub (movimento legato allo scroll = VIVO) */
+    gsap.utils.toArray('.section-head, .review-score, .contact-card, .hours-card, .artist-card').forEach(function (el) {
+      gsap.fromTo(el,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 1, ease: 'none',
+          scrollTrigger: { trigger: el, start: 'top 88%', end: 'top 30%', scrub: 0.6 }
+        }
+      );
+    });
+
+    /* Gallery figures: reveal con stagger scrub */
+    gsap.utils.toArray('.gallery-scroll').forEach(function (g) {
+      gsap.fromTo(g.children,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1, y: 0, duration: 1, stagger: 0.08, ease: 'none',
+          scrollTrigger: { trigger: g, start: 'top 88%', end: 'top 25%', scrub: 0.6 }
+        }
+      );
+    });
+
+    /* Studio split: parallax sottile sulla foto */
+    var splitImg = document.querySelector('.split-media img');
+    if (splitImg) {
+      gsap.fromTo(splitImg,
+        { yPercent: -5 },
+        {
+          yPercent: 5, ease: 'none',
+          scrollTrigger: { trigger: '.split-media', start: 'top bottom', end: 'bottom top', scrub: true }
+        }
+      );
+    }
+
     ScrollTrigger.refresh();
   })();
+
+  /* Safety net: se GSAP non parte, mostra tutto */
+  setTimeout(function () {
+    if (window.__gsapReady) return;
+    var els = document.querySelectorAll('.section-head, .review-score, .contact-card, .hours-card, .artist-card, .gallery-scroll figure');
+    for (var i = 0; i < els.length; i++) {
+      els[i].style.opacity = '1';
+      els[i].style.transform = 'none';
+    }
+  }, 4000);
 })();

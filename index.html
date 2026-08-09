@@ -1,384 +1,369 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>No More Tears — Tattoo &amp; Barber Shop | Genzano di Roma · 5.0★</title>
-  <meta name="description" content="No More Tears Tattoo &amp; Barber Shop a Genzano di Roma, Via Fratelli Colabona 37/41: tatuaggi personalizzati e barba con 5.0 su 5 su 15 recensioni Google. Alessio e Simone ti aspettano. Chiama 06 9209 8203.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="No More Tears — Tattoo &amp; Barber Shop | Genzano di Roma · 5.0★">
-  <meta property="og:description" content="Inchiostro e lametta in Via Fratelli Colabona 37/41, Genzano di Roma. 5.0 su 5 su Google. Chiama 06 9209 8203.">
-  <meta property="og:locale" content="it_IT">
-  <meta name="theme-color" content="#0A0A0C">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preload" href="fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/barlow-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <style>
-    /* ============ HERO: anti-flash + keyframes (CSS puro, MAI GSAP) ============ */
-    .hero__badge, .hero__subtitle, .hero__cta, .hero__stats, .hero__scroll { opacity: 0; }
-    .hero__badge, .hero__subtitle, .hero__cta, .hero__stats, .hero__scroll { transform: translateY(24px); }
-    .hero__title .word { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.1em; margin-bottom: -0.1em; }
-    .hero__title .word > span { display: inline-block; opacity: 0; animation: heroWordUp 1s var(--ease-out) forwards; }
-    @keyframes heroWordUp {
-      from { opacity: 0; transform: translateY(112%); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes heroFadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero__badge   { animation: heroFadeUp 0.9s var(--ease-out) forwards; }
-    .hero__subtitle{ animation: heroFadeUp 0.9s var(--ease-out) forwards; }
-    .hero__cta     { animation: heroFadeUp 0.9s var(--ease-out) forwards; }
-    .hero__stats   { animation: heroFadeUp 0.9s var(--ease-out) forwards; }
-    .hero__scroll  { animation: heroFadeUp 0.9s var(--ease-out) forwards; }
-  </style>
-  <noscript>
-    <style>
-      .reveal, .reveal-line, .hero__badge, .hero__title .word > span,
-      .hero__subtitle, .hero__cta, .hero__stats, .hero__scroll { opacity: 1 !important; transform: none !important; }
-    </style>
-  </noscript>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>No More Tears Tattoo &amp; Barber — Genzano di Roma · 5.0★</title>
+<meta name="description" content="No More Tears Tattoo & Barber a Genzano di Roma (Via Fratelli Colabona 37/41): rasatura e taglio con Alessio, tatuaggi con Simone. 5.0★ su Google. Chiama il 06 9209 8203.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://dawiddroz.github.io/no-more-tears-genzano/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="No More Tears Tattoo & Barber">
+<meta property="og:title" content="No More Tears Tattoo &amp; Barber — Genzano di Roma · 5.0★">
+<meta property="og:description" content="Rasatura e taglio con Alessio, tatuaggi con Simone. 5.0★ su Google. Chiama il 06 9209 8203.">
+<meta property="og:url" content="https://dawiddroz.github.io/no-more-tears-genzano/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="No More Tears Tattoo &amp; Barber — Genzano di Roma">
+<meta name="twitter:description" content="Barba, taglio e inchiostro a Genzano di Roma. 5.0★ su Google.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%230A0A0A'/><text x='32' y='44' font-family='Georgia' font-style='italic' font-size='30' fill='%23C9A227' text-anchor='middle'>N</text></svg>">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+<style>
+.reveal, .section-head, .review-score, .cta-banner { opacity: 1 !important; transform: none !important; }
+.hero .eyebrow, .hero h1 .word span, .hero-sub, .hero-status, .hero-cta, .hero-stats, .stat, .hero-scroll { opacity: 1 !important; transform: none !important; }
+</style>
+</noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "No More Tears Tattoo & Barber",
+  "description": "Barberia e studio di tatuaggi a Genzano di Roma: taglio e rasatura con Alessio, tatuaggi con Simone.",
+  "url": "https://dawiddroz.github.io/no-more-tears-genzano/",
+  "telephone": "+3906****8203",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Fratelli Colabona, 37/41",
+    "postalCode": "00045",
+    "addressLocality": "Genzano di Roma",
+    "addressRegion": "RM",
+    "addressCountry": "IT"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 41.7082, "longitude": 12.6858},
+  "openingHours": "Mo-Fr 09:00-19:00, Sa 11:00-19:00",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:00", "closes": "19:00"}
+  ],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "15"},
+  "priceRange": "€€"
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Salta al contenuto</a>
+<div class="progress-bar" aria-hidden="true"></div>
 
-  <div class="progress-bar" aria-hidden="true"></div>
-
-  <!-- ============ NAVBAR ============ -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a href="#top" class="nav__logo" aria-label="No More Tears — Tattoo and Barber Shop, torna in cima">
-        <svg viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z" fill="#E11D2E"/><circle cx="12" cy="12" r="4.6" fill="#0A0A0C"/></svg>
-        No More Tears
-      </a>
-      <nav class="nav__menu" aria-label="Navigazione principale">
-        <a href="#servizi" class="nav__link">Servizi</a>
-        <a href="#galleria" class="nav__link">Galleria</a>
-        <a href="#recensioni" class="nav__link">Recensioni</a>
-        <a href="#orari" class="nav__link">Orari</a>
-        <a href="#contatti" class="nav__link">Contatti</a>
-        <a href="tel:+390692098203" class="btn btn--red nav__cta">Chiama ora</a>
-      </nav>
-      <button class="nav__burger" aria-label="Apri menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <img src="images/hero.jpg" alt="" fetchpriority="high">
-      </div>
-      <div class="container hero__inner">
-        <span class="hero__badge"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 su Google · 15 recensioni</span>
-        <h1 class="hero__title">
-          <span class="line-2"><span class="word"><span>No&nbsp;More</span></span></span>
-          <span class="line-2"><span class="word"><span class="accent">Tears</span></span></span>
-        </h1>
-        <p class="hero__subtitle">Tattoo &amp; <strong>Barber Shop</strong> · Genzano di Roma<br>Inchiostro, lametta e zero lacrime.</p>
-        <div class="hero__cta">
-          <a href="tel:+390692098203" class="btn btn--red">Chiama 06 9209 8203</a>
-          <a href="#servizi" class="btn btn--ghost">Scopri i servizi</a>
-        </div>
-        <div class="hero__stats">
-          <div>
-            <div class="stat__num"><span class="counter" data-count="5.0" data-decimals="1" data-suffix="">5.0</span><span class="red">★</span></div>
-            <div class="stat__label">Su Google</div>
-          </div>
-          <div>
-            <div class="stat__num"><span class="counter" data-count="15" data-suffix="">15</span></div>
-            <div class="stat__label">Recensioni, tutte 5★</div>
-          </div>
-          <div>
-            <div class="stat__num">2<span class="red">+</span></div>
-            <div class="stat__label">Artisti in negozio</div>
-          </div>
-        </div>
-      </div>
-      <span class="hero__scroll" aria-hidden="true">Scorri</span>
-    </section>
-
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span class="marquee__item">Tattoo <span class="dot">✕</span></span>
-        <span class="marquee__item">Barber <span class="dot">✕</span></span>
-        <span class="marquee__item">Passione <span class="dot">✕</span></span>
-        <span class="marquee__item">Genzano di Roma <span class="dot">✕</span></span>
-        <span class="marquee__item">5.0 su Google <span class="dot">✕</span></span>
-        <span class="marquee__item">Tattoo <span class="dot">✕</span></span>
-        <span class="marquee__item">Barber <span class="dot">✕</span></span>
-        <span class="marquee__item">Passione <span class="dot">✕</span></span>
-        <span class="marquee__item">Genzano di Roma <span class="dot">✕</span></span>
-        <span class="marquee__item">5.0 su Google <span class="dot">✕</span></span>
-      </div>
-    </div>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="chi-siamo">
-      <div class="container">
-        <div class="about__grid">
-          <div class="about__media">
-            <img src="images/interior.jpg" alt="L'ambiente curato e accogliente dello studio No More Tears" loading="lazy">
-            <span class="tattoo-tag">Genzano di Roma · Castelli Romani</span>
-          </div>
-          <div class="about__text">
-            <span class="eyebrow">Chi siamo</span>
-            <h3>Inchiostro &amp; lametta,<br>una sola casa.</h3>
-            <p>Nel cuore di Genzano, in Via Fratelli Colabona, due artigiani hanno messo insieme le loro passioni: il <strong>tatuaggio</strong> e la <strong>barba</strong>. Un locale curato e accogliente dove chi entra per un taglio esce con un progetto in testa — e chi entra per un tatuaggio esce tirato a lucido.</p>
-            <p>Niente fretta, niente resa. Solo lavoro pulito, chiacchiere sincere e <strong>zero lacrime</strong>.</p>
-            <div class="about__people">
-              <div class="person">
-                <div class="person__role">Barber</div>
-                <div class="person__name">Alessio</div>
-                <p class="person__note">Taglio, barba, cura del dettaglio. Preciso, pulito e — dicono le recensioni — "tratta con i guanti".</p>
-              </div>
-              <div class="person">
-                <div class="person__role">Tattoo Artist</div>
-                <div class="person__name">Simone</div>
-                <p class="person__note">Disegni personalizzati e cover-up. "Si capisce subito che il suo più che lavoro è passione".</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SERVIZI ============ -->
-    <section class="section section--alt" id="servizi">
-      <div class="container">
-        <span class="eyebrow">I servizi</span>
-        <h2 class="section-title">Cosa trovi <em>da noi</em></h2>
-        <p class="section-lead">Due reparti, una sola porta. Prezzi su misura in negozio: ogni lavoro è diverso, come ogni pelle.</p>
-        <div class="services__grid">
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
-            </div>
-            <h3>Tatuaggi personalizzati</h3>
-            <p>Disegni unici nati da zero, studiati su di te: significato, stile e posizione decisi insieme.</p>
-            <span class="service-card__tag">Su appuntamento</span>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 19l7-7 3 3-7 7-3-3z"/><path d="M17 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l8 8"/></svg>
-            </div>
-            <h3>Cover-up</h3>
-            <p>Quel tatuaggio che non ti piace più? Si trasforma: coperture pensate per rinascere.</p>
-            <span class="service-card__tag">Consulenza in negozio</span>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg>
-            </div>
-            <h3>Piccolo formato &amp; flash</h3>
-            <p>Primo tatuaggio o dettaglio veloce: linee essenziali, pulite, senza pensieri.</p>
-            <span class="service-card__tag">Chiedi i disegni disponibili</span>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l-4 8v6l4 4H6l4-4v-6L6 3z"/></svg>
-            </div>
-            <h3>Taglio uomo</h3>
-            <p>Sfumature nette, contorni precisi, stile che dura. Il taglio giusto per la tua testa e il tuo tempo.</p>
-            <span class="service-card__tag">Walk-in o appuntamento</span>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M5 4v16M5 4c0 5 14 3 14 0M5 20h14M19 20V4"/></svg>
-            </div>
-            <h3>Barba &amp; rifinitura</h3>
-            <p>Regolarizzazione, linea e cura: asciugamano caldo, precisione e zero fretta.</p>
-            <span class="service-card__tag">Rituale completo</span>
-          </article>
-          <article class="service-card">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 21.5 12C19 16.4 12 21 12 21z"/><path d="M12 12l3-3"/></svg>
-            </div>
-            <h3>Taglio + barba</h3>
-            <p>Il pacchetto completo: esci che sei un'altra persona. Unico prezzo, nessuna sorpresa.</p>
-            <span class="service-card__tag">Il preferito</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GALLERY ============ -->
-    <section class="section" id="galleria">
-      <div class="container">
-        <span class="eyebrow">Galleria</span>
-        <h2 class="section-title">Il <em>lavoro</em> parla</h2>
-        <p class="section-lead">Un assaggio di ciò che succede dietro quella porta: inchiostro, acciaio e mani ferme.</p>
-        <div class="gallery__grid">
-          <figure class="g-item g-item--tall">
-            <img src="images/ink.jpg" alt="Inchiostro fresco su pelle durante una seduta di tatuaggio" loading="lazy">
-            <figcaption class="g-item__label">Inchiostro</figcaption>
-          </figure>
-          <figure class="g-item">
-            <img src="images/needle.jpg" alt="Ago e macchinetta da tatuaggio al lavoro" loading="lazy">
-            <figcaption class="g-item__label">Ago &amp; mano ferma</figcaption>
-          </figure>
-          <figure class="g-item">
-            <img src="images/barber.jpg" alt="Taglio di barba in corso nella poltrona del barbiere" loading="lazy">
-            <figcaption class="g-item__label">La poltrona</figcaption>
-          </figure>
-          <figure class="g-item">
-            <img src="images/tools.jpg" alt="Attrezzi del mestiere: forbici e pettini da barbiere" loading="lazy">
-            <figcaption class="g-item__label">Gli attrezzi</figcaption>
-          </figure>
-          <figure class="g-item g-item--tall">
-            <img src="images/hero.jpg" alt="Seduta di tatuaggio nello studio: concentrazione e passione" loading="lazy">
-            <figcaption class="g-item__label">Il lavoro</figcaption>
-          </figure>
-          <figure class="g-item">
-            <img src="images/interior.jpg" alt="L'ambiente dello studio No More Tears" loading="lazy">
-            <figcaption class="g-item__label">Lo studio</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ RECENSIONI ============ -->
-    <section class="section section--alt" id="recensioni">
-      <div class="container">
-        <div class="reviews__head">
-          <div>
-            <span class="eyebrow">Social proof</span>
-            <h2 class="section-title">5.0 su <em>Google</em></h2>
-          </div>
-          <div class="reviews__score">
-            <div class="big"><span class="counter" data-count="5.0" data-decimals="1">5.0</span><span class="dec">★</span></div>
-            <div>
-              <div class="stars" aria-hidden="true">★★★★★</div>
-              <div class="n">15 recensioni — tutte a 5 stelle</div>
-            </div>
-          </div>
-        </div>
-        <div class="reviews__grid">
-          <article class="review-card">
-            <div class="review-card__stars" aria-hidden="true">★★★★★</div>
-            <blockquote>«Si capisce subito che il suo più che lavoro è passione!»</blockquote>
-            <div class="review-card__meta"><span class="src">Recensione Google</span> · No More Tears</div>
-          </article>
-          <article class="review-card">
-            <div class="review-card__stars" aria-hidden="true">★★★★★</div>
-            <blockquote>«Eccezionale Simone, lo consiglio.»</blockquote>
-            <div class="review-card__meta"><span class="src">Recensione Google</span> · No More Tears</div>
-          </article>
-          <article class="review-card">
-            <div class="review-card__stars" aria-hidden="true">★★★★★</div>
-            <blockquote>«Servizio top! Alessio troppo forte, mi ha trattato "con i guanti": preciso, pulito e chiacchierata fluida. Un grande in bocca al lupo a Simone e tutta la sua crew! Daje!»</blockquote>
-            <div class="review-card__meta"><span class="src">Recensione Google</span> · No More Tears</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ORARI & CONTATTI ============ -->
-    <section class="section" id="orari">
-      <div class="container">
-        <span class="eyebrow">Orari &amp; contatti</span>
-        <h2 class="section-title">Vieni a <em>trovarci</em></h2>
-        <div class="contact__grid">
-          <div>
-            <table class="hours-table">
-              <caption class="section-lead" style="caption-side:top;text-align:left;margin-bottom:14px;">Aperture settimanali</caption>
-              <tbody>
-                <tr data-day="lunedì"><td>Lunedì</td><td>09:00 – 19:00</td></tr>
-                <tr data-day="martedì"><td>Martedì</td><td>09:00 – 19:00</td></tr>
-                <tr data-day="mercoledì"><td>Mercoledì</td><td>09:00 – 19:00</td></tr>
-                <tr data-day="giovedì"><td>Giovedì</td><td>09:00 – 19:00</td></tr>
-                <tr data-day="venerdì"><td>Venerdì</td><td>09:00 – 19:00</td></tr>
-                <tr data-day="sabato"><td>Sabato</td><td>11:00 – 19:00</td></tr>
-                <tr data-day="domenica"><td>Domenica</td><td>Chiuso</td></tr>
-              </tbody>
-            </table>
-            <div id="map" role="application" aria-label="Mappa: No More Tears, Via Fratelli Colabona 37/41, Genzano di Roma"></div>
-          </div>
-          <div class="contact__info">
-            <div class="contact__row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <div>
-                <div class="k">Dove siamo</div>
-                <div class="v">Via Fratelli Colabona, 37/41<br>00045 Genzano di Roma (RM)</div>
-              </div>
-            </div>
-            <div class="contact__row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
-              <div>
-                <div class="k">Telefono</div>
-                <div class="v"><a href="tel:+390692098203">06 9209 8203</a></div>
-              </div>
-            </div>
-            <div class="contact__row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              <div>
-                <div class="k">Prenotazioni</div>
-                <div class="v">Tatuaggi su appuntamento.<br>Per taglio e barba puoi passare direttamente.</div>
-              </div>
-            </div>
-            <div class="contact__cta">
-              <a href="tel:+390692098203" class="btn btn--red">Chiama 06 9209 8203</a>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=No+More+Tears+Tattoo+%26+Barber+shop+Via+Fratelli+Colabona+37+Genzano+di+Roma" class="btn btn--ghost" target="_blank" rel="noopener">Indicazioni Google Maps</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============ STICKY CTA ============ -->
-  <div class="sticky-cta" aria-hidden="false">
-    <span class="lbl">Prenota ora</span>
-    <a href="tel:+390692098203" class="btn btn--red">06 9209 8203</a>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-item">Via Fratelli Colabona, 37/41 — Genzano di Roma (RM)</span>
+    <span class="status-pill" id="statusPill" role="status" aria-live="polite"><span class="status-dot"></span><span id="statusText">Verifica orari…</span></span>
   </div>
+</header>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span class="footer__brand">
-        <svg viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 20 12 20s12-11 12-20C24 5.4 18.6 0 12 0z" fill="#E11D2E"/><circle cx="12" cy="12" r="4.6" fill="#0A0A0C"/></svg>
-        No More Tears
-      </span>
-      <p class="footer__copy">© 2026 No More Tears — Tattoo &amp; Barber Shop · Via Fratelli Colabona 37/41, Genzano di Roma · <a href="tel:+390692098203">06 9209 8203</a></p>
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">No More <em>Tears</em></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#studio">Studio</a></li>
+      <li><a href="#galleria">Galleria</a></li>
+      <li><a href="#artisti">Artisti</a></li>
+      <li><a href="#recensioni">Recensioni</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+      <li><a href="tel:+390692098203" class="btn btn-gold btn-sm">Chiama</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-bg" style="background-image:url('images/hero.webp')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <span class="eyebrow">Tattoo &amp; Barber · Genzano di Roma</span>
+    <h1 class="wordmark"><span class="word"><span>Barba</span></span> <span class="word"><span>e</span></span> <span class="word"><span>inchiostro,</span></span> <span class="word"><span><em>senza</em></span></span> <span class="word"><span><em>lacrime.</em></span></span></h1>
+    <p class="hero-sub">Taglio, rasatura e tatuaggi in un unico studio. Alessio per la barba, Simone per l'inchiostro: passione e precisione, cinque stelle su Google.</p>
+    <p class="hero-status" id="heroStatus"><span class="status-dot"></span><span id="heroStatusText">Verifica orari…</span></p>
+    <div class="hero-cta">
+      <a href="tel:+390692098203" class="btn btn-gold">Chiama lo studio</a>
+      <a href="#artisti" class="btn btn-outline">Scopri gli artisti</a>
     </div>
-  </footer>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">5.0</span><span class="stat-label">★ su Google</span></div>
+      <div class="stat"><span class="stat-num">15</span><span class="stat-label">Recensioni</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label">Artisti in studio</span></div>
+    </div>
+  </div>
+  <a class="hero-scroll" href="#studio" aria-label="Scorri per scoprire di più"><span class="hero-scroll-wheel"></span></a>
+</section>
 
-  <!-- CDN (defer, con retry-loop in main.js/animations.js) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.13/dist/lenis.min.js" defer></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/animations.js" defer></script>
-  <!-- Delay hero: sincrono, PRIMA del primo paint -->
-  <script>
-    (function () {
-      var words = document.querySelectorAll('.hero__title .word > span');
-      words.forEach(function (el, i) { el.style.animationDelay = (0.12 + i * 0.16) + 's'; });
-      var els = [
-        ['.hero__badge', 0.5],
-        ['.hero__subtitle', 0.68],
-        ['.hero__cta', 0.82],
-        ['.hero__stats', 1.0],
-        ['.hero__scroll', 1.3]
-      ];
-      els.forEach(function (pair) {
-        var el = document.querySelector(pair[0]);
-        if (el) el.style.animationDelay = pair[1] + 's';
-      });
-    })();
-  </script>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-group">
+      <span>Taglio</span><i>◆</i><span>Barba</span><i>◆</i><span>Rasatura</span><i>◆</i><span>Tatuaggi</span><i>◆</i><span>Black &amp; Grey</span><i>◆</i><span>Genzano di Roma</span><i>◆</i><span>5.0 su Google</span><i>◆</i><span>Alessio</span><i>◆</i><span>Simone</span><i>◆</i>
+    </div>
+    <div class="ticker-group">
+      <span>Taglio</span><i>◆</i><span>Barba</span><i>◆</i><span>Rasatura</span><i>◆</i><span>Tatuaggi</span><i>◆</i><span>Black &amp; Grey</span><i>◆</i><span>Genzano di Roma</span><i>◆</i><span>5.0 su Google</span><i>◆</i><span>Alessio</span><i>◆</i><span>Simone</span><i>◆</i>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="studio">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">About · Studio</p>
+      <div class="hairline"></div>
+      <h2>Lo <em>studio</em></h2>
+      <p>No More Tears Tattoo &amp; Barber in Via Fratelli Colabona a Genzano di Roma: un ambiente curato dove la barba si fa con precisione e l'inchiostro con passione. Ogni cliente è seguito con attenzione, dal primo taglio all'ultimo dettaglio del tatuaggio.</p>
+    </div>
+    <div class="split">
+      <div class="split-text">
+        <p><strong>Alessio</strong> cura taglio, barba e rasatura: attento, professionale, capace di capire subito le esigenze del cliente. Tratta ogni cliente "con i guanti": preciso, pulito, e con la giusta chiacchierata.</p>
+        <p><strong>Simone</strong> è il tatuatore dello studio: chi lo conosce lo consiglia senza riserve. Dal Black &amp; Grey ai progetti personalizzati, ogni pezzo nasce dal disegno e dal confronto con chi lo porterà per sempre.</p>
+        <p>Qui il lavoro è passione, e i clienti lo riconoscono: <strong>5.0 su Google</strong>, tutte le recensioni a cinque stelle.</p>
+        <a href="tel:+390692098203" class="btn btn-outline">Chiama il 06 9209 8203</a>
+      </div>
+      <div class="split-media">
+        <figure><img src="images/interior.webp" alt="Interno dello studio No More Tears a Genzano" width="1400" height="933" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="galleria">
+  <div class="container">
+    <div class="section-head head-row">
+      <div>
+        <p class="eyebrow">Portfolio · Tatuaggi</p>
+        <div class="hairline"></div>
+        <h2>Inchiostro <em>senza paura</em></h2>
+      </div>
+    </div>
+    <div class="swipe-hint"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/></svg><span>Scorri per vedere tutti</span></div>
+    <div class="gallery-scroll" role="region" aria-label="Galleria tatuaggi">
+      <figure><img src="images/ink.webp" alt="Tatuaggio realizzato da Simone in studio" width="1400" height="2100" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+      <figure><img src="images/needle.webp" alt="Seduta di tatuaggio in corso" width="1400" height="2100" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+      <figure><img src="images/hero.webp" alt="Atmosfera dello studio di tatuaggi" width="1400" height="2100" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="barberia">
+  <div class="container">
+    <div class="section-head head-row">
+      <div>
+        <p class="eyebrow">Portfolio · Barberia</p>
+        <div class="hairline"></div>
+        <h2>Barba <em>curata</em></h2>
+      </div>
+    </div>
+    <div class="swipe-hint"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/></svg><span>Scorri per vedere tutti</span></div>
+    <div class="gallery-scroll" role="region" aria-label="Galleria barberia">
+      <figure><img src="images/barber.webp" alt="Taglio e barba da No More Tears" width="1400" height="933" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+      <figure><img src="images/tools.webp" alt="Strumenti del barber" width="1400" height="930" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+      <figure><img src="images/interior.webp" alt="Postazione barberia" width="1400" height="933" loading="lazy" onerror="this.classList.add('img-placeholder')"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="artisti">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Team</p>
+      <div class="hairline"></div>
+      <h2>Gli <em>artisti</em></h2>
+      <p>Due mani esperte, due stili: lo studio di Alessio e Simone.</p>
+    </div>
+    <div class="artists-grid">
+      <article class="artist-card">
+        <div class="artist-photo"><span class="artist-initial" aria-hidden="true">A</span><span class="sr-only" style="position:absolute;left:-9999px">Alessio, barber e parrucchiere</span></div>
+        <div class="artist-body">
+          <h3>Alessio <em>Barber</em></h3>
+          <p class="artist-role">Taglio · Barba · Rasatura</p>
+          <p>Attento, professionale e capace di capire subito le esigenze del cliente. Chi si siede sulla sua sedia torna: preciso, pulito e con la giusta chiacchierata.</p>
+        </div>
+      </article>
+      <article class="artist-card">
+        <div class="artist-photo"><span class="artist-initial" aria-hidden="true">S</span><span class="sr-only" style="position:absolute;left:-9999px">Simone, tatuatore</span></div>
+        <div class="artist-body">
+          <h3>Simone <em>Tattoo</em></h3>
+          <p class="artist-role">Tatuaggi · Black &amp; Grey</p>
+          <p>Il tatuatore dello studio: eccezionale, lo consigliano tutti. Ogni pezzo nasce da un disegno originale, discusso e curato nel dettaglio.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="recensioni">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Recensioni</p>
+      <div class="hairline"></div>
+      <h2>Cinque stelle, <em>sempre</em></h2>
+    </div>
+    <div class="review-summary">
+      <div class="review-score"><span class="review-big">5.0</span><span class="review-stars">★★★★★</span><span class="review-count">15 recensioni su Google</span></div>
+      <div class="review-carousel" id="reviewCarousel" aria-roledescription="carosello" aria-label="Recensioni dei clienti">
+        <div class="review-track" id="reviewTrack">
+          <figure class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>«Si capisce subito che il suo più che lavoro è passione!»</blockquote>
+            <figcaption>Recensione Google</figcaption>
+          </figure>
+          <figure class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>«Eccezionale Simone, lo consiglio.»</blockquote>
+            <figcaption>Recensione Google</figcaption>
+          </figure>
+          <figure class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>«5 stelle perché di più non posso!»</blockquote>
+            <figcaption>Recensione Google</figcaption>
+          </figure>
+          <figure class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>«Mi sono trovato molto bene da Alessio. È un parrucchiere attento, professionale e capace di capire subito le esigenze del cliente.»</blockquote>
+            <figcaption>Recensione Google</figcaption>
+          </figure>
+          <figure class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <blockquote>«Servizio top! Alessio troppo forte, mi ha trattato "con i guanti": preciso, pulito e chiacchierata fluida.»</blockquote>
+            <figcaption>Recensione Google</figcaption>
+          </figure>
+        </div>
+        <div class="review-dots" id="reviewDots" role="tablist" aria-label="Seleziona recensione"></div>
+      </div>
+    </div>
+    <p class="hours-note" style="margin-top:24px"><a href="https://www.google.com/maps/search/No+More+Tears+Genzano/" target="_blank" rel="noopener">Lascia una recensione su Google</a> · le recensioni non sono verificate da Google</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="contatti">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Contatti</p>
+      <div class="hairline"></div>
+      <h2>Passa a <em>trovarci</em></h2>
+      <p>Chiama per prenotare taglio, barba o una consulenza per il tuo tatuaggio.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <div>
+              <p class="label">Indirizzo</p>
+              <p class="value">Via Fratelli Colabona, 37/41 — 00045 Genzano di Roma (RM)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            <div>
+              <p class="label">Telefono</p>
+              <a href="tel:+390692098203" class="value">06 9209 8203</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div>
+              <p class="label">Orari</p>
+              <p class="value">Lun–Ven 09:00–19:00 · Sab 11:00–19:00 · Dom chiuso</p>
+            </div>
+          </div>
+        </div>
+        <div class="hours-card">
+          <h4>Orari di apertura</h4>
+          <table class="hours-table">
+            <tbody>
+              <tr data-day="1"><td>Lunedì</td><td>09:00 – 19:00</td></tr>
+              <tr data-day="2"><td>Martedì</td><td>09:00 – 19:00</td></tr>
+              <tr data-day="3"><td>Mercoledì</td><td>09:00 – 19:00</td></tr>
+              <tr data-day="4"><td>Giovedì</td><td>09:00 – 19:00</td></tr>
+              <tr data-day="5"><td>Venerdì</td><td>09:00 – 19:00</td></tr>
+              <tr data-day="6"><td>Sabato</td><td>11:00 – 19:00</td></tr>
+              <tr data-day="7"><td>Domenica</td><td>Chiuso</td></tr>
+            </tbody>
+          </table>
+          <p class="hours-note">Orari confermati dal titolare · fuori orario chiama il 06 9209 8203</p>
+        </div>
+      </div>
+      <div class="map-wrap" id="mapWrap">
+        <noscript><iframe title="Mappa No More Tears" src="https://www.google.com/maps?q=Via+Fratelli+Colabona+37+Genzano+di+Roma&output=embed" width="600" height="280" style="border:0" loading="lazy"></iframe></noscript>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="logo">No More <em>Tears</em></a>
+      <p>Tattoo &amp; Barber a Genzano di Roma. Taglio, barba e inchiostro con passione — 5.0 su Google.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="#studio">Lo studio</a></li>
+        <li><a href="#galleria">Galleria</a></li>
+        <li><a href="#artisti">Artisti</a></li>
+        <li><a href="#recensioni">Recensioni</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contatti</h4>
+      <ul>
+        <li><a href="tel:+390692098203">06 9209 8203</a></li>
+        <li>Via Fratelli Colabona, 37/41</li>
+        <li>00045 Genzano di Roma (RM)</li>
+        <li>Lun–Ven 09:00–19:00 · Sab 11:00–19:00</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 No More Tears Tattoo &amp; Barber — Genzano di Roma</span>
+      <span class="footer-legal"><a href="privacy.html">Privacy Policy</a> · <a href="cookie.html">Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-labelledby="cookieTitle" aria-describedby="cookieDesc">
+  <div class="cookie-banner-inner">
+    <p id="cookieDesc"><strong>Cookie e privacy</strong><br>Usiamo cookie tecnici e — solo con il tuo consenso — Google Maps per mostrarti la posizione. Non usiamo cookie di profilazione. Consulta la <a href="privacy.html">Privacy Policy</a> e la <a href="cookie.html">Cookie Policy</a>.</p>
+    <div class="cookie-btns">
+      <button class="btn btn-gold btn-sm" id="cookieAccept">Accetta</button>
+      <button class="btn btn-outline btn-sm" id="cookieDecline">Solo tecnici</button>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-cta">
+  <a href="tel:+390692098203" class="mobile-cta-btn">Chiama</a>
+  <a href="#contatti" class="mobile-cta-btn mobile-cta-btn-alt">Orari</a>
+</div>
+
+<script>
+/* Hero word delays — sincrono, prima del primo paint (anti-flash) */
+(function () {
+  var words = document.querySelectorAll('.hero h1 .word span');
+  words.forEach(function (el, i) { el.style.animationDelay = (0.3 + i * 0.09) + 's'; });
+  var stats = document.querySelectorAll('.hero-stats .stat');
+  stats.forEach(function (el, i) { el.style.animationDelay = (1.25 + i * 0.13) + 's'; });
+})();
+</script>
+<script src="js/vendor/gsap.min.js" defer></script>
+<script src="js/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/animations.js" defer></script>
 </body>
 </html>
